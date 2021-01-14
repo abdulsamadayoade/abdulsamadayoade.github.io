@@ -1,0 +1,173 @@
+// NAV
+.nav--first {
+    position: absolute;
+    padding: 4rem;
+    top: 0;
+    left: 0;
+    animation: fade-in ease-in .5s;
+
+    .logo--blue {
+        color: $primary-color-2;
+        position: absolute;
+        padding: 0 20px;
+        left: 1.5rem;
+        top: 3rem;
+        z-index: 1;
+        @extend %logoShared;
+    }
+
+    .nav--icon {
+        background-color: $white-color;
+        right: 4rem;
+        top: 2.5rem;
+        z-index: 10;
+        width: 5rem;
+        height: 5rem;
+        cursor: pointer;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .bar1, .bar2, .bar3 {
+            width: 17px;
+            height: 2px;
+            margin: 4px 0;
+            transition: 0.4s;
+            background-color: $primary-color-2;
+            border-radius: 1rem;
+        }
+
+        .bar2 {
+            width: 27px;
+            transform-origin: right;
+        }
+    }
+}
+
+.nav--second {
+    min-height: 100vh;
+    width: 100%;
+    background-color: $primary-color-2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translateX(-100%);
+    transform-origin: left;
+    transition: transform .5s ease-in-out;
+
+    .logo--white {
+        @extend %logoShared;
+        padding: 4rem;
+        color: $white-color;
+        display: inline-block;
+        position: fixed;
+        top: -1.2rem;
+        z-index: 10;
+    }
+
+    &__content {
+        width: 100%;
+        position: absolute;
+        top: 12rem;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        grid-gap: 4rem;
+        padding: 4rem;
+        color: $white-color;
+
+        @include rwdHeight(580) {
+            top: 10rem;
+        }
+
+        &--box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            min-height: 25rem;
+
+            .web--profiles {
+                display: flex;
+                flex-direction: column;
+                &__box {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        margin-right: 2.2rem;
+                        height: 1.7rem;
+                    }
+                }
+                &__box:nth-child(2) {
+                    margin-top: 1rem;
+                }
+            }
+            .resume {
+                font-size: 3.5rem;
+                text-decoration: none;
+                letter-spacing: -1px;
+                color: $white-color;
+                font-family: $tertiary-font;
+                align-self: flex-start;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    letter-spacing: 3px;
+                }
+            }
+
+            .nav__list {
+                justify-self: flex-start;
+                &--item {
+                    list-style: none;
+                    &:not(:last-child) {
+                        margin-bottom: 3.5rem;
+                    }
+                }
+            }
+
+            .nav__link {
+                text-transform: uppercase;
+                font-size: 2.5rem;
+                text-decoration: none;
+                color: $white-color;
+                font-family: $tertiary-font;
+                letter-spacing: .5px;
+                transition: all .2s ease-in-out;
+                &:hover {
+                    letter-spacing: 3px;
+                }
+            }
+        }
+    }
+}
+
+.nav--second.showIn {
+    transform: translateX(0);
+}
+
+// ANIMATIONS
+.nav--anim .bar1 {
+    transform: rotate(-45deg) translate(-6px, 7px);
+}
+  
+.nav--anim .bar2 {
+    transform: translateX(200%);
+    opacity: 0;
+}
+  
+.nav--anim .bar3 {
+    transform: rotate(45deg) translate(-7px, -8px);
+}
+
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

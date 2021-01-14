@@ -1,0 +1,52 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    min-height: 5.4rem;
+    letter-spacing: .14rem;
+    font-family: $tertiary-font;
+    overflow: hidden;
+    position: relative;
+    transition: all .5s ease;
+}
+
+.btn--blue {
+    background-color: $primary-color-1;
+    color: $white-color;
+    min-width: 23rem;
+    transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover {
+        transform: translateY(5px);
+    }
+}
+
+.btn--white {
+    border: 1px solid $primary-color-1;
+    color: $primary-color-1;
+    background: transparent;
+    min-width: 27.2rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -10%;
+        height: 100%;
+        width: 0;
+        background-color: $primary-color-1;
+        z-index: -1;
+        transition: width .5s ease-in-out;
+    }
+
+    &:hover {
+        color: $white-color;
+    }
+
+    &:hover::before {
+        width: 120%;
+    }
+}
