@@ -47,14 +47,23 @@ main {
                 background-image: url('../../images/lines.svg');
                 background-repeat: no-repeat;
                 background-size: contain;
+                opacity: 0;
+                transform: translateY(20rem);
+                animation: showsUp ease-in-out 2s .35s both;
                 z-index: -1;
             }
-        }
 
-        img {
-            width: 100%;
-            outline: 2.5px solid $primary-color-2;
-            object-fit: cover;
+            .photo {
+                border: 2.5px solid $primary-color-2;
+                background-image: url('../../images/sample.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                transform: translate(-40rem);
+                opacity: 0;
+                animation: fade-in-left ease-in .5s 2s forwards;
+            }
         }
     }
 
@@ -104,9 +113,7 @@ main {
                 height: 16px;
                 width: 16px;
                 margin-left: 10px;
-                animation-name: scrollDown;
-                animation-duration: 1s;
-                animation-iteration-count: infinite;
+                animation: scrollDown 1s infinite;
             }
 
             @keyframes scrollDown {
@@ -281,6 +288,32 @@ main {
     }
     to{
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes showsUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-left{
+    from{
+        transform: translate(-100rem);
+    }
+    to{
+        transform: translate(0rem);
         opacity: 1;
     }
 }
