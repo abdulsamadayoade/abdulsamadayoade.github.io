@@ -165,6 +165,21 @@ main {
             }
         }
     }
+
+    // VIEW RESUME
+    a.resume--mobile {
+        display: none;
+
+        @media screen and (max-width: 1200px) {
+            display: inline-flex;
+        }
+    }
+
+    a.resume--pc {
+        @media screen and (max-width: 1200px) {
+            display: none;
+        }
+    }   
 }
 
 // PROJECTS SECTION

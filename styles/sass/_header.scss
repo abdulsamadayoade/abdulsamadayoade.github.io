@@ -149,6 +149,21 @@
     transform: translateX(0);
 }
 
+// RESUME
+a.resume-link.mobile {
+    display: none;
+
+    @media screen and (max-width: 1200px) {
+        display: inline-block;
+    }
+}
+
+a.resume-link.pc {
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+}
+
 // ANIMATIONS
 .nav--anim .bar1 {
     transform: rotate(-45deg) translate(-6px, 7px);
