@@ -29,4 +29,4 @@ const logoWhite = document.querySelector('.logo--white');
 logoWhite.addEventListener('click', function () {
     navSecond.classList.remove('showIn');
     navIcon.classList.remove('nav--anim');
-})
+});
