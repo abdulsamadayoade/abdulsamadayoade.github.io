@@ -466,7 +466,7 @@ main {
 
 .hero__photo--box .photo {
   border: 2.5px solid #4F46E5;
-  background-image: url("../../images/sample.png");
+  background-image: url("../../images/photo.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
