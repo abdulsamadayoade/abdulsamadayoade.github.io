@@ -274,7 +274,7 @@ main, .footer {
   margin-top: 1rem;
 }
 
-.nav--second__content--box .resume {
+.nav--second__content--box .resume-link {
   font-size: 3.5rem;
   text-decoration: none;
   letter-spacing: -1px;
@@ -284,7 +284,7 @@ main, .footer {
   transition: all .2s ease-in-out;
 }
 
-.nav--second__content--box .resume:hover {
+.nav--second__content--box .resume-link:hover {
   letter-spacing: 3px;
 }
 
@@ -833,4 +833,200 @@ main {
 .other-projects {
   margin-top: 5rem;
   padding: 13rem 0 20rem;
+}
+
+.resume {
+  max-width: 1200px;
+  margin: 70px auto;
+  padding: 2rem 35px;
+  font-size: 1.25rem;
+  background-color: #f5f4fc;
+}
+
+.resume .content-text {
+  color: rgba(71, 71, 71, 0.75);
+  font-size: 16px;
+  max-width: 63rem;
+  line-height: 25px;
+}
+
+.resume h4 {
+  font-family: "SFUIText-Bold", sans-serif;
+  margin-bottom: .5rem;
+  color: #4831D4;
+  letter-spacing: .1px;
+  font-size: 16px;
+}
+
+.resume__header {
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+.resume__header a {
+  margin-left: auto;
+}
+
+.resume__header img {
+  height: 15px;
+  width: 15px;
+}
+
+.resume__main-content {
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+  row-gap: 50px;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+.resume__main-content .sidebar {
+  grid-column: 1/2;
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume__main-content .sidebar div {
+  margin-bottom: 3.5rem;
+}
+
+.resume__main-content .sidebar a {
+  font-family: "SFUIText-Bold", sans-serif;
+  font-size: 14px;
+  color: #4831D4;
+  letter-spacing: .2px;
+  display: inline-block;
+  margin-bottom: .35rem;
+  position: relative;
+}
+
+.resume__main-content .sidebar a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #CCF381;
+}
+
+.resume__main-content .sidebar p {
+  margin-bottom: .28rem;
+  font-family: "SFUIText-Regular", sans-serif;
+  color: #474747;
+  font-size: 14px;
+}
+
+.resume__main-content .sidebar ul {
+  list-style: none;
+}
+
+.resume__main-content .sidebar li {
+  margin-bottom: .6rem;
+  font-family: "SFUIText-Regular", sans-serif;
+  color: #474747;
+  font-size: 14px;
+  position: relative;
+}
+
+.resume__main-content .sidebar li::before {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: -12px;
+  transform: translateY(-45%);
+  height: 5px;
+  width: 5px;
+  background-color: #474747;
+}
+
+.resume__main-content .top-content {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  padding: 1rem 5rem;
+  position: relative;
+}
+
+.resume__main-content .top-content .heading {
+  color: #4831D4;
+  font-size: 5.2rem;
+  font-family: "SFUIText-Bold", sans-serif;
+  line-height: 1.2;
+}
+
+.resume__main-content .top-content .heading span {
+  display: block;
+  margin: -8px 0;
+}
+
+.resume__main-content .top-content .subheading {
+  font-size: 22px;
+  color: #474747;
+  font-family: "SFUIText-Regular", sans-serif;
+  font-weight: normal;
+  margin: 1.9rem 0 3.3rem;
+  letter-spacing: .4px;
+}
+
+.resume__main-content .top-content::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #cbc9dd;
+}
+
+.resume__main-content .other-content {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  padding: 0 50px;
+}
+
+.resume__main-content .other-content h4 {
+  font-size: 20px;
+  position: relative;
+}
+
+.resume__main-content .other-content h4:after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  height: 8px;
+  width: 90px;
+  border-radius: 2px;
+  background-color: #CCF381;
+  z-index: -1;
+}
+
+.resume__main-content .other-content div {
+  margin: 40px 0;
+  padding: 0 10px;
+  position: relative;
+}
+
+.resume__main-content .other-content h5 {
+  color: #4831D4;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.resume__main-content .other-content p {
+  max-width: 550px;
+}
+
+.resume__main-content .other-content .p-links {
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+
+.resume__main-content .other-content .p-links a {
+  text-transform: lowercase;
+  margin: 0 4px;
+  font-family: "SFUIText-SemiBold", sans-serif;
 }
