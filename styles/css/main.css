@@ -109,9 +109,15 @@ a {
   top: 50%;
   margin-left: 10px;
   transform: translateY(-50%);
-  width: 70px;
+  width: 7rem;
   height: 4px;
   background-color: #4831D4;
+}
+
+@media screen and (max-width: 500px) {
+  .h-2::after {
+    width: 6rem;
+  }
 }
 
 .h-4 {

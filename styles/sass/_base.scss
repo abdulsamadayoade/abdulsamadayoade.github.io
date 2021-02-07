@@ -123,9 +123,13 @@ a {text-decoration: none;}
         top: 50%;
         margin-left: 10px;
         transform: translateY(-50%);
-        width: 70px;
+        width: 7rem;
         height: 4px;
         background-color: $primary-color-1;
+
+        @media screen and(max-width: 500px) {
+            width: 6rem;
+        }
     }
 }
 
