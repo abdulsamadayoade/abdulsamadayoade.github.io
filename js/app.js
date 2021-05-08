@@ -23,6 +23,14 @@ navLinks.forEach(function (navLink) {
     })
 });
 
+// CLOSE THE NAV WHEN THE RESUME LINK IS GETTING CLICKED
+const resumeLink = document.querySelector('.resume-link');
+
+resumeLink.addEventListener('click', () => {
+    navSecond.classList.remove('showIn');
+    navIcon.classList.remove('nav--anim');
+})
+
 // CLOSE THE NAV WHEN THE SIDE NAV LOGO IS CLICKED
 const logoWhite = document.querySelector('.logo--white');
 
