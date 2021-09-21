@@ -53,3 +53,13 @@
         @content;
     }
 }
+
+// SCROLL BAR
+::-webkit-scrollbar {
+    background: $white-color;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary-color-1;
+}

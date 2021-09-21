@@ -167,6 +167,15 @@ main, .footer {
   margin: 0 auto;
 }
 
+::-webkit-scrollbar {
+  background: #FFFFFF;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4831D4;
+}
+
 .nav--first {
   position: absolute;
   padding: 4rem;
@@ -871,6 +880,7 @@ main {
   font-size: 5rem;
   font-family: "SFUIText-Bold", sans-serif;
   line-height: 1.4;
+  letter-spacing: -5px;
 }
 
 .resume__heading span {
