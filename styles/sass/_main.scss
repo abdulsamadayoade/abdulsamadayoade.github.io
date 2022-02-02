@@ -8,7 +8,7 @@ main {
 
 // HERO SECTION
 .hero {
-    height: 100vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,9 +17,10 @@ main {
     max-width: 100%;
 
     &__container {
-        display: grid;
-        grid-template-columns: 300px 1fr;
-        gap: 35px 10px;
+        display: block;
+        // display: grid;
+        // grid-template-columns: 300px 1fr;
+        // gap: 35px 10px;
 
         @include rwd(768) {
             // grid-template-columns: 1fr;
@@ -137,7 +138,7 @@ main {
 
 // ABOUT SECTION
 .about--section {
-    padding: 13rem 0;
+    padding: 0 0 10rem;
 
     .about {
         display: flex;
