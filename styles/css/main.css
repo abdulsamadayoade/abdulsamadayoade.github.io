@@ -301,6 +301,7 @@ main, .footer {
 }
 
 .nav--second__content--box .web--profiles {
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
