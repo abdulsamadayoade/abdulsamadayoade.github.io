@@ -1,0 +1,65 @@
+.center-item {
+    display: grid;
+    place-items: center;
+}
+
+.mt-100 {
+    margin-top: 10rem;
+}
+
+.mt-50 {
+    margin-top: 5rem;
+}
+
+.mb-10 {
+    margin-bottom: 1rem;
+}
+
+.mb-5 {
+    margin-bottom: .5rem;
+}
+
+%logoShared {
+    font-family: $logo-font;
+    font-size: 25px;
+    letter-spacing: -.6px;
+
+    &:hover {
+        opacity: .8;
+    }
+}
+
+%layoutShared {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@mixin rwd($screen) {
+    @media (max-width: $screen+'px') {
+        @content;
+    }
+}
+
+@mixin rwdMin($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+}
+
+@mixin rwdHeight($screen) {
+    @media (max-height: $screen+'px') {
+        @content;
+    }
+}
+
+// SCROLL BAR
+::-webkit-scrollbar {
+    background: $white-color;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary-color-1;
+}
